@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/backgroundColor"
+    tools:context=".activities.VideoEditorActivity">
+
+
+    <Button
+        android:id="@+id/selectVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/saveVideo"
+        android:text="UPLOAD Video" />
+
+    <Button
+        android:id="@+id/saveVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="2dp"
+        android:layout_alignParentEnd="true"
+        android:text="Save" />
+
+
+    <VideoView
+        android:id="@+id/layout_movie_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relative"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/selectVideo"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/textleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:text="00:00"
+                android:textColor="#404040" />
+
+            <TextView
+                android:id="@+id/textright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="10dp"
+                android:textColor="#404040"
+                android:layout_weight="1"
+                android:text="00:00"
+                android:textAlignment="textEnd" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <org.florescu.android.rangeseekbar.RangeSeekBar
+
+                android:id="@+id/rangeSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:alwaysActive="true"
+                app:barHeight="2dp"
+                app:showLabels="false"
+                app:textAboveThumbsColor="#000000" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lineartime"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+                        <ImageButton
+
+                            android:id="@+id/slow"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="#00ffffff"
+                            android:src="@drawable/icon_effect_slow"/>
+                        <TextView
+                            android:id="@+id/slowTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Slow"
+                            android:textColor="#404040"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="19dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+                        <ImageButton
+                            android:id="@+id/reverse"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="#00ffffff"
+                            android:src="@drawable/icon_effect_time"/>
+                        <TextView
+                            android:id="@+id/reverseTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Reverse"
+                            android:textColor="#404040"
+                            android:layout_marginRight="34dp"
+                            android:layout_marginLeft="31dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+                        <ImageButton
+                            android:id="@+id/fast"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="#00ffffff"
+                            android:src="@drawable/icon_effect_repeatedly"/>
+                        <TextView
+                            android:id="@+id/flashTV"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="22dp"
+                            android:textColor="#404040"
+                            android:layout_marginLeft="29dp"
+                            android:text="Flash"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

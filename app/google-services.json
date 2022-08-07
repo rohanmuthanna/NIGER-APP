@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "279668380007",
+    "project_id": "nigerapplication",
+    "storage_bucket": "nigerapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279668380007:android:c19e9d88f48e2e132f9fc2",
+        "android_client_info": {
+          "package_name": "nigerindia.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279668380007-agihjii06jpaab4hklknunlpl5eh97of.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCVxcbuVe6hTJthNoAVpS4LD1qhoFIw_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279668380007-agihjii06jpaab4hklknunlpl5eh97of.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
